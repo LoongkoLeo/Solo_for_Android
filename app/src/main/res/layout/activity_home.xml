@@ -23,33 +23,33 @@
 
         <Button
             android:id="@+id/id_acties_button"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@null"
             android:text="动态" />
 
         <Button
             android:id="@+id/id_manage_button"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@null"
             android:text="管理" />
 
         <Button
             android:id="@+id/id_mine_button"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@null"
             android:text="我的" />
 
         <Button
             android:id="@+id/id_rss_button"
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:background="@null"
             android:text="订阅" />
     </LinearLayout>
