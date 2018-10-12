@@ -8,8 +8,50 @@
     tools:context=".HomeActivity">
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_home_recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
+
     </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/id_acties_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="动态" />
+
+        <Button
+            android:id="@+id/id_manage_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="管理" />
+
+        <Button
+            android:id="@+id/id_mine_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="我的" />
+
+        <Button
+            android:id="@+id/id_rss_button"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="订阅" />
+    </LinearLayout>
 
 </RelativeLayout>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
+        android:id="@+id/id_top_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -39,8 +38,10 @@
     </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
+        android:id="@+id/id_article_relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/id_top_toolbar"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp">
@@ -75,12 +76,13 @@
                 android:textSize="18sp" />
         </RelativeLayout>
 
-
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/id_aimbutton_linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/id_article_relativeLayout"
         android:layout_marginTop="10dp"
         android:orientation="horizontal">
 
@@ -112,7 +114,67 @@
     <ImageView
         android:id="@+id/id_article_image"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp" />
+        android:layout_height="200dp"
+        android:layout_below="@+id/id_aimbutton_linearLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/background_article" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/id_introduce_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_article_image"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="欢迎" />
+
+    <TextView
+        android:id="@+id/id_detail_article"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_introduce_article"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="详细" />
+
+    <Button
+        android:id="@+id/id_like_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/id_detail_article"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@mipmap/heart" />
+
+    <RelativeLayout
+        android:id="@+id/id_pages_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_like_button">
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:text="1" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/id_pages_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_pages_relativeLayout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Open Source, Open Mind, Open Sight, Open Future!" />
+
+</RelativeLayout>
