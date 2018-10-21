@@ -29,10 +29,10 @@ public class HomeActivity extends AppCompatActivity {
     private HomeAdapter homeAdapter;
     private RecyclerView item_home_recyclerview;
     private Fragment homeFragment, tabFragment, archivesFragment, friendFragemtn;
-    private List<Fragment> fragmentList;
+    private List<Fragment> fragmentList = new ArrayList<>();
     private ViewPager id_tab_viewpager;
 
-    private List<String> tabTitleList;
+    private List<String> tabTitleList = new ArrayList<>();
 
 
     TabLayout id_tab_button;
@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
     public void initView() {
         item_home_recyclerview = findViewById(R.id.item_home_recyclerview);
         id_tab_button = findViewById(R.id.bt_tab_button);
-        id_tab_button.setTabMode(TabLayout.MODE_FIXED);
+        //id_tab_button.setTabMode(TabLayout.MODE_FIXED);
         id_tab_viewpager = findViewById(R.id.vp_tab_viewpager);
 
         tabTitleList.add("首页");
@@ -64,16 +64,19 @@ public class HomeActivity extends AppCompatActivity {
         //添加标签栏
         for (int i = 0; i < tabTitleList.size(); i++) {
 
-            HomeFragment homeFragment = HomeFragment.newInstance(tabTitleList.get(i));
+            HomeFragment homeFragment = HomeFragment.newInstance(tabTitleList.get(i).toString());
             fragmentList.add(homeFragment);
         }
 
         item_home_recyclerview.setAdapter(homeAdapter);
+        viewPagerAdapter = new ViewPagerAdapter();
         id_tab_viewpager.setAdapter(viewPagerAdapter);
         id_tab_button.setupWithViewPager(id_tab_viewpager);
     }
 
     public class ViewPagerAdapter extends PagerAdapter {
+
+
 
         @Override
         public int getCount() {

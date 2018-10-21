@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/tl_top_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.Toolbar>
+        android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
 
     <TabLayout
         android:id="@+id/bt_tab_button"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_below="@id/tl_top_toolbar"
-        >
-    </TabLayout>
+        app:tabGravity="fill"
+        app:tabMode="scrollable"
+        tools:ignore="MissingPrefix"></TabLayout>
+
     <android.support.v4.view.ViewPager
         android:id="@+id/vp_tab_viewpager"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
     </android.support.v4.view.ViewPager>
+
     <RelativeLayout
         android:id="@+id/id_article_relativeLayout"
         android:layout_width="match_parent"
