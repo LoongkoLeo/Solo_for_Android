@@ -64,13 +64,30 @@ public class HomeActivity extends AppCompatActivity {
         //添加标签栏
         for (int i = 0; i < tabTitleList.size(); i++) {
 
-            HomeFragment homeFragment = HomeFragment.newInstance(tabTitleList.get(i).toString());
+            HomeFragment homeFragment = HomeFragment.newInstance(tabTitleList.get(i));
             fragmentList.add(homeFragment);
         }
 
         item_home_recyclerview.setAdapter(homeAdapter);
         viewPagerAdapter = new ViewPagerAdapter();
         id_tab_viewpager.setAdapter(viewPagerAdapter);
+
+        id_tab_button.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
         id_tab_button.setupWithViewPager(id_tab_viewpager);
     }
 
