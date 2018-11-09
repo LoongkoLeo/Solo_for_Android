@@ -5,169 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/tl_top_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
-
-    <TabLayout
-        android:id="@+id/bt_tab_button"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_below="@id/tl_top_toolbar"
-        app:tabGravity="fill"
-        app:tabMode="scrollable"
-        tools:ignore="MissingPrefix"></TabLayout>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/vp_tab_viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </android.support.v4.view.ViewPager>
-
-    <RelativeLayout
-        android:id="@+id/id_article_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/bt_tab_button"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp">
-
-        <TextView
-            android:id="@+id/tv_article_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:gravity="center"
-            android:text="世界，你好！"
-            android:textSize="25sp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_article_name">
-
-            <ImageView
-                android:id="@+id/iv_calendar_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center" />
-
-            <TextView
-                android:id="@+id/tv_calendar_text"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:text="YYYY-MMMM-DDDD"
-                android:textSize="18sp" />
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-    <LinearLayout
-        android:id="@+id/id_aimbutton_linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/id_article_relativeLayout"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bt_label_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="#505046" />
-
-        <Button
-            android:id="@+id/bt_reply_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_weight="1"
-            android:background="#505046" />
-
-        <Button
-            android:id="@+id/bt_watch_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="40dp"
-            android:layout_weight="1"
-            android:background="#505046" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/iv_article_image"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@+id/id_aimbutton_linearLayout"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@mipmap/background_article" />
-
-    <TextView
-        android:id="@+id/tv_introduce_article"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/iv_article_image"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:text="欢迎" />
-
-    <TextView
-        android:id="@+id/tv_detail_article"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_introduce_article"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:text="详细" />
-
-    <Button
-        android:id="@+id/id_like_button"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_below="@+id/tv_detail_article"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@mipmap/heart" />
-
-    <RelativeLayout
-        android:id="@+id/id_pages_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/id_like_button">
-
-        <TextView
-            android:id="@+id/tv_page_button"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:text="1" />
-    </RelativeLayout>
-
     <TextView
         android:id="@+id/tv_notice_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/id_pages_relativeLayout"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginRight="10dp"
+        android:gravity="center"
         android:text="Open Source, Open Mind, Open Sight, Open Future!" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_article_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_notice_button"
+        android:layout_marginTop="5dp">
+    </android.support.v7.widget.RecyclerView>
+
 
 </RelativeLayout>

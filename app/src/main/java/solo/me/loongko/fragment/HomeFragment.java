@@ -5,6 +5,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import solo.me.loongko.adapter.HomeAdapter;
 import solo.me.loongko.solo.R;
 
 
@@ -20,12 +23,8 @@ public class HomeFragment extends Fragment {
     private View view;
     private static final String KEY = "title";
 
-    private ViewPager vp_tab_viewpager;
-    private TextView tv_article_name, tv_calendar_text, tv_introduce_article,
-            tv_detail_article, tv_page_button, tv_notice_button;
-    private ImageView iv_calendar_image, iv_article_image;
 
-    private Button bt_label_button, bt_reply_button, bt_watch_button, id_like_button;
+    private RecyclerView recyclerView;
 
 
     @Override
@@ -35,6 +34,10 @@ public class HomeFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
+
+        recyclerView = view.findViewById(R.id.id_article_recyclerview);
+        HomeAdapter homeAdapter = new HomeAdapter();
+        recyclerView.setAdapter(homeAdapter);
         return view;
     }
 
