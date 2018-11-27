@@ -1,6 +1,13 @@
 <resources>
-    <string name="app_name">Solo</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Solo</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_phone">点击按钮事件展示</string>
+    <string name="app_one">第一种</string>
+    <string name="app_two">第二种</string>
+    <string name="app_there">第三种</string>
+    <string name="app_android">第三种</string>
+    <string name="app_iphone">第四种</string>
+
 </resources>

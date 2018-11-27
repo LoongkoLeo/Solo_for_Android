@@ -14,7 +14,10 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.List;
+
 import solo.me.loongko.adapter.HomeAdapter;
+import solo.me.loongko.bean.HomeValue;
 import solo.me.loongko.solo.R;
 
 
@@ -26,6 +29,8 @@ public class HomeFragment extends Fragment {
 
     private RecyclerView recyclerView;
 
+    private List<HomeValue> homeValue;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,7 +41,7 @@ public class HomeFragment extends Fragment {
 
 
         recyclerView = view.findViewById(R.id.id_article_recyclerview);
-        HomeAdapter homeAdapter = new HomeAdapter();
+        HomeAdapter homeAdapter = new HomeAdapter(homeValue);
         recyclerView.setAdapter(homeAdapter);
         return view;
     }

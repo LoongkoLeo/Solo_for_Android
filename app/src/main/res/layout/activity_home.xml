@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         app:tabIndicatorColor="#12B870"
         app:tabSelectedTextColor="#2F2E35"
-        app:tabTextColor="#000000"/>
+        app:tabTextColor="#000000" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/id_swtitch_viewpage"
@@ -27,7 +27,7 @@
         android:layout_alignParentBottom="true">
 
         <Button
-            android:id="@+id/id_acties_button"
+            android:id="@+id/id_article_button"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

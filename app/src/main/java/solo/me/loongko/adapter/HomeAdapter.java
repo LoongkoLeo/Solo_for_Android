@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.zip.Inflater;
 
+import solo.me.loongko.bean.HomeValue;
 import solo.me.loongko.fragment.HomeFragment;
 import solo.me.loongko.solo.HomeActivity;
 import solo.me.loongko.solo.R;
@@ -25,15 +26,15 @@ import solo.me.loongko.solo.R;
 public class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.HomeViewHolder> {
 
 
-    private List<String> data=new ArrayList<>();
+    private List<HomeValue> data;
     Context context;
 
-    public HomeAdapter() {
-
+    public HomeAdapter(List<HomeValue> homeValueList) {
+        homeValueList=data;
     }
 
 
-    public HomeAdapter.HomeViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+    public HomeViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
 
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_home_recyclerview, viewGroup, false);
         HomeViewHolder homeViewHolder = new HomeViewHolder(view);
